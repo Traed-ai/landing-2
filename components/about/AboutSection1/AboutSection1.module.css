@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #0c2027;
+  padding: 200px 0 100px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  font-size: 54px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.caption {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #fff;
+  max-width: 606px;
+  width: 100%;
+  text-align: center;
+}
