@@ -19,7 +19,6 @@ function FAQ() {
             Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
             phasellus mollis sit aliquam sit nullam.
           </div>
-
           <Accordion className={styles.accordionWrapper} elevation={0}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
@@ -45,23 +44,21 @@ function FAQ() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>
+              <Typography variant="h6">
                 How you can convert your invoices into cash?
               </Typography>
             </AccordionSummary>
             <AccordionDetails style={{ marginLeft: "16px" }}>
-              <Typography>
-                <ul>
-                  <li>Register with Traed.ai</li>
-                  <li>Introduce your company</li>
-                  <li>Add your buyer and get limits</li>
-                  <li>Upload your invoices</li>
-                  <li>
-                    Get your cash in 48 hours once your Traed contract and
-                    Buyer&apos;s notice are signed
-                  </li>
-                </ul>
-              </Typography>
+              <ul>
+                <li>Register with Traed.ai</li>
+                <li>Introduce your company</li>
+                <li>Add your buyer and get limits</li>
+                <li>Upload your invoices</li>
+                <li>
+                  Get your cash in 48 hours once your Traed contract and
+                  Buyer&apos;s notice are signed
+                </li>
+              </ul>
             </AccordionDetails>
           </Accordion>
           <Accordion className={styles.accordionWrapper} elevation={0}>
@@ -70,21 +67,21 @@ function FAQ() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Do you provide ongoing support?</Typography>
+              <Typography variant="h6">
+                Do you provide ongoing support?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails style={{ marginLeft: "16px" }}>
-              <Typography>
-                <ul>
-                  <li>Register with Traed.ai</li>
-                  <li>Introduce your company</li>
-                  <li>Add your buyer and get limits</li>
-                  <li>Upload your invoices</li>
-                  <li>
-                    Get your cash in 48 hours once your Traed contract and
-                    Buyer&apos;s notice are signed
-                  </li>
-                </ul>
-              </Typography>
+              <ul>
+                <li>Register with Traed.ai</li>
+                <li>Introduce your company</li>
+                <li>Add your buyer and get limits</li>
+                <li>Upload your invoices</li>
+                <li>
+                  Get your cash in 48 hours once your Traed contract and
+                  Buyer&apos;s notice are signed
+                </li>
+              </ul>
             </AccordionDetails>
           </Accordion>
         </div>
