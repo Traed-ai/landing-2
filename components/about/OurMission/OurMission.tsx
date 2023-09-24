@@ -22,6 +22,7 @@ function OurMission() {
               Semper velit odio cras pretium tristique habitant. Elit eu
               penatibus congue orci turpis. Enim diam id.
             </div>
+            <div />
             <div className={styles.title}>Our Story</div>
             <div className={styles.caption}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
