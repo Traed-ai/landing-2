@@ -39,11 +39,13 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.headerNavItem-active {
+.headerNavItemActive {
   color: #f06523;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
