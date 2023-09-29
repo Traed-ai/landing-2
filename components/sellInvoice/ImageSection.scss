@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+.heading-content p {
+  font-family: DM Sans;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 55.02px;
+  color: #fff;
+}
+.para-content {
+  p {
+    color: #fff;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.004px;
+  }
+}
+.para-icon-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  p {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32.004px;
+  }
+}
+.ImageSection {
+  img {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media (max-width: 991px) {
+  .imageTextSection {
+    flex-direction: column !important;
+  }
+  .content {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    .para-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .ImageSection{
+    width: 70% !important;
+}
+}
+@media (max-width: 786px) {
+    .ImageSection{
+        width: 70% !important;
+    }
+  .heading-content p {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45.02px;
+   
+  }
+  .para-content p {
+ 
+    font-size: 16px;
+    line-height: 22.004px;
+  }
+}
