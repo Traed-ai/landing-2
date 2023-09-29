@@ -1,0 +1,54 @@
+.wrapper {
+  background: radial-gradient(
+    449.57% 92.38% at 77.5% 48.61%,
+    /* #53be7e 0%, */ #138c4d 31.81%,
+    #0c874f 57.6%,
+    #055238 88.28%
+  );
+  padding: 100px 0 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 36px;
+    flex-direction: column;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.imageContainer {
+  max-width: 372px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  height: 400px;
+}
+
+.title {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55.02px;
+  color: #fff;
+}
+
+.caption {
+  font-size: 18px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.84px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
