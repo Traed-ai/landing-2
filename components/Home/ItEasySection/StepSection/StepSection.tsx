@@ -10,7 +10,7 @@ const StepSection = () => {
       className="stepSectionCardWrapper"
       width={"100%"}
       minHeight={"400px"}
-      bgcolor={"red"}
+      // bgcolor={"red"}
     >
       <StepSectionCard />
     </Grid>

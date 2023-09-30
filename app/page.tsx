@@ -22,6 +22,7 @@ export default function Home() {
       <FlexibleSection />
       <TradeSection />
       <ItsEasySection />
+      
       <FAQ />
       <Footer />
     </div>
