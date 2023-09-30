@@ -10,19 +10,21 @@ import AboutUsSection from "@/components/sellInvoice/AboutUsSection";
 import TraedBusinessSection from "@/components/Home/TraedBusinessSection/TraedBusinessSection";
 import TopBanner from "@/components/Home/TopBanner/TopBanner";
 import ItsEasySection from "@/components/Home/ItEasySection/iItsEasySection";
+import BusinessMatchmaking from "@/components/BusinessMatchmaking/BusinessMatchmaking";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <TopBanner />
+      <BusinessMatchmaking />
       {/* <TraedBusinessSection /> */}
       <AboutUsSection />
       <SellInvoice />
       <FlexibleSection />
       <TradeSection />
       <ItsEasySection />
-      
+
       <FAQ />
       <Footer />
     </div>
