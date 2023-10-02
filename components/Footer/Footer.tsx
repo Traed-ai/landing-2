@@ -26,17 +26,17 @@ function Footer() {
           <div className={styles.footerItem}>
             <div className={styles.footerItemTitle}>About Us</div>
             <div className={styles.footerItemContent}>Home</div>
-            <div className={styles.footerItemContent}>Products</div>
-            <div className={styles.footerItemContent}>Services</div>
+            {/* <div className={styles.footerItemContent}>Products</div>
+            <div className={styles.footerItemContent}>Services</div> */}
           </div>
-          <div className={styles.footerItem}>
+          {/* <div className={styles.footerItem}>
             <div className={styles.footerItemTitle}>Contact Us</div>
             <div className={styles.footerItemContent}>Information</div>
             <div className={styles.footerItemContent}>Request a quote</div>
             <div className={styles.footerItemContent}>Consultations</div>
             <div className={styles.footerItemContent}>Help Center</div>
             <div className={styles.footerItemContent}>Terms and conditions</div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

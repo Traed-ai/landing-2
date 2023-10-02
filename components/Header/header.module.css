@@ -35,8 +35,6 @@
 }
 
 .headerMenu {
-  height: 24px;
-  width: 24px;
   position: relative;
   display: none;
   @media (max-width: 768px) {

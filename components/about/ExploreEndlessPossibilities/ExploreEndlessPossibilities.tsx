@@ -3,6 +3,7 @@ import styles from "./ExploreEndlessPossibilities.module.css";
 import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 function ExploreEndlessPossibilities() {
   return (
@@ -18,15 +19,21 @@ function ExploreEndlessPossibilities() {
               traed community now. We are providing simple assets solution every
               successfull company needs.
             </div>
-            <Button
-              backgroundColor="#0C2027"
-              color="#fff"
-              borderRadius="80px"
-              height="56px"
-              width="184px"
+            <Link
+              href={"https://portal.traed.ai"}
+              passHref
+              style={{ textDecoration: "none" }}
             >
-              Get Started
-            </Button>
+              <Button
+                backgroundColor="#0C2027"
+                color="#fff"
+                borderRadius="80px"
+                height="56px"
+                width="184px"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
           <div className={styles.imageContainer}>
             <Image

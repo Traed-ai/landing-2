@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import { usePathname, useRouter } from "next/navigation";
 import { IconButton } from "@mui/material";
+import Link from "next/link";
 
 function Header() {
   const pathname = usePathname();
@@ -26,12 +27,14 @@ function Header() {
       <Container>
         <div className={styles.headerContainer}>
           <div className={styles.headerLogo}>
-            <Image
-              src="./assets/logo/logo-white-bg.svg"
-              height={32}
-              width={80}
-              alt="tread.ai"
-            />
+            <Link href={"/"} passHref>
+              <Image
+                src="./assets/logo/logo-white-bg.svg"
+                height={32}
+                width={80}
+                alt="tread.ai"
+              />
+            </Link>
           </div>
           <div className={styles.headerNav}>
             <div
@@ -63,21 +66,37 @@ function Header() {
             {/* <div onClick={()=>router.push('/')} className={`${styles.headerNavItem} ${isActive("/company")}`}>
               Company
             </div> */}
-            <Button
-              borderRadius="6px"
-              color="#fff"
-              width="130px"
-              height="40px"
-              backgroundColor="#06BA63"
+            <Link
+              href={"https://portal.traed.ai"}
+              passHref
+              style={{
+                textDecoration: "none",
+                color: "#000",
+                margin: "0 auto",
+              }}
             >
-              Get Started
-            </Button>
+              <Button
+                borderRadius="6px"
+                color="#fff"
+                width="130px"
+                height="40px"
+                backgroundColor="#06BA63"
+              >
+                Get Started →
+              </Button>
+            </Link>
           </div>
 
-          <IconButton onClick={handleMenuOpen}>
-            <Image height={24} width={24} src={"/assets/menu.svg"} alt="menu" />
-          </IconButton>
-          {/* </div> */}
+          <div className={styles.headerMenu}>
+            <IconButton onClick={handleMenuOpen}>
+              <Image
+                height={24}
+                width={24}
+                src={"/assets/menu.svg"}
+                alt="menu"
+              />
+            </IconButton>
+          </div>
           {isMenuOpen && (
             <div className={styles.menuContainer}>
               <IconButton
@@ -114,6 +133,25 @@ function Header() {
               >
                 About
               </div>
+              <Link
+                href={"https://portal.traed.ai"}
+                passHref
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                  margin: "0 auto",
+                }}
+              >
+                <Button
+                  borderRadius="6px"
+                  color="#fff"
+                  width="130px"
+                  height="40px"
+                  backgroundColor="#06BA63"
+                >
+                  Get Started →
+                </Button>
+              </Link>
             </div>
           )}
         </div>
