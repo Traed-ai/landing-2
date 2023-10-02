@@ -5,6 +5,7 @@ import Container from "../Container/Container";
 import Image from "next/image";
 import Button from "../Button/Button";
 import { usePathname, useRouter } from "next/navigation";
+import { IconButton } from "@mui/material";
 
 function Header() {
   const pathname = usePathname();
@@ -12,6 +13,12 @@ function Header() {
 
   const isActive = (href: string) => {
     return pathname === href ? styles.headerNavItemActive : "";
+  };
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const handleMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -39,12 +46,12 @@ function Header() {
             >
               About
             </div>
-            <div
+            {/* <div
               onClick={() => router.push("/solutions")}
               className={`${styles.headerNavItem} ${isActive("/solutions")}`}
             >
               Our Solutions
-            </div>
+            </div> */}
             {/* <div onClick={()=>router.push('/')} className={`${styles.headerNavItem} ${isActive("/sectors")}`}>
               Sectors
             </div>
@@ -66,6 +73,49 @@ function Header() {
               Get Started
             </Button>
           </div>
+
+          <IconButton onClick={handleMenuOpen}>
+            <Image height={24} width={24} src={"/assets/menu.svg"} alt="menu" />
+          </IconButton>
+          {/* </div> */}
+          {isMenuOpen && (
+            <div className={styles.menuContainer}>
+              <IconButton
+                style={{ position: "absolute", top: "20px", right: "20px" }}
+                onClick={handleMenuOpen}
+              >
+                <Image
+                  src="/assets/cross.png"
+                  height={24}
+                  width={24}
+                  alt="tread.ai"
+                />
+              </IconButton>
+              <div
+                className={styles.headerLogo}
+                style={{ marginBottom: "16px" }}
+              >
+                <Image
+                  src="./assets/logo/logo-white-bg.svg"
+                  height={32}
+                  width={80}
+                  alt="tread.ai"
+                />
+              </div>
+              <div
+                className={`${styles.menuItem} ${isActive("/")}`}
+                onClick={() => router.push("/")}
+              >
+                Home
+              </div>
+              <div
+                className={`${styles.menuItem} ${isActive("/about")}`}
+                onClick={() => router.push("/about")}
+              >
+                About
+              </div>
+            </div>
+          )}
         </div>
       </Container>
     </div>

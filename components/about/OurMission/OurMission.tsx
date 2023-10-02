@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./OurMission.module.css";
 import Container from "@/components/Container/Container";
@@ -39,10 +40,12 @@ function OurMission() {
           </div>
           <div className={styles.rightContent}>
             <div className={styles.imageContainer}>
-              <Image
+              <img
                 alt="Our Mission"
-                height={400}
-                width={400}
+                height={"100%"}
+                width={"100%"}
+                // height={400}
+                // width={400}
                 src="/assets/icons/our-mission.png"
               />
             </div>

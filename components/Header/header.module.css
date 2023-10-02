@@ -34,6 +34,16 @@
   }
 }
 
+.headerMenu {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
 .headerNavItem {
   color: #fff;
   font-size: 16px;
@@ -48,4 +58,34 @@
   line-height: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.menuContainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000e0;
+  z-index: 100;
+  overflow: hidden;
+  display: none;
+  padding: 28px 16px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.menuItem {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
 }
