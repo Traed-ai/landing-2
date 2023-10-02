@@ -4,6 +4,7 @@ import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
 import Image from "next/image";
 import expolre from "@/public/assets/explore.svg";
+import Link from "next/link";
 
 function ExploreEndlessPossibilities() {
   return (
@@ -19,16 +20,22 @@ function ExploreEndlessPossibilities() {
               traed community now. We are providing simple assets solution every
               successfull company needs.
             </div>
-            <Button
-              backgroundColor="rgba(6, 186, 99, 1)"
-              color="#fff"
-              borderRadius="6px"
-              height="56px"
-              width="184px"
+            <Link
+              href={"https://portal.traed.ai"}
+              passHref
+              style={{ textDecoration: "none" }}
             >
-              Get Started &nbsp;{" "}
-              <span style={{ fontWeight: "bold" }}>&#8594;</span>
-            </Button>
+              <Button
+                backgroundColor="rgba(6, 186, 99, 1)"
+                color="#fff"
+                borderRadius="6px"
+                height="56px"
+                width="184px"
+              >
+                Get Started &nbsp;{" "}
+                <span style={{ fontWeight: "bold" }}>&#8594;</span>
+              </Button>
+            </Link>
           </div>
           <div className={styles.imageContainer}>
             <Image src={expolre} alt="explore" layout="fill" />
