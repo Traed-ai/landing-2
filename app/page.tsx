@@ -10,6 +10,8 @@ import AboutUsSection from "@/components/sellInvoice/AboutUsSection";
 import TraedBusinessSection from "@/components/Home/TraedBusinessSection/TraedBusinessSection";
 import TopBanner from "@/components/Home/TopBanner/TopBanner";
 import ItsEasySection from "@/components/Home/ItEasySection/iItsEasySection";
+import WhatOurUserSaySection from "@/components/Home/WhatOurUserSaySection/WhatOurUserSaySection";
+import ExploreEndlessPossibilities from "@/components/Home/ExploreEndlessPossibilities/ExploreEndlessPossibilities";
 
 export default function Home() {
   return (
@@ -22,7 +24,9 @@ export default function Home() {
       <FlexibleSection />
       <TradeSection />
       <ItsEasySection />
-      
+      <WhatOurUserSaySection />
+      <ExploreEndlessPossibilities />
+
       <FAQ />
       <Footer />
     </div>
