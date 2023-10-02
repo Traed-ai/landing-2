@@ -12,16 +12,18 @@ import TopBanner from "@/components/Home/TopBanner/TopBanner";
 import ItsEasySection from "@/components/Home/ItEasySection/iItsEasySection";
 import WhatOurUserSaySection from "@/components/Home/WhatOurUserSaySection/WhatOurUserSaySection";
 import ExploreEndlessPossibilities from "@/components/Home/ExploreEndlessPossibilities/ExploreEndlessPossibilities";
+import BusinessMatchmaking from "@/components/BusinessMatchmaking/BusinessMatchmaking";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <TopBanner />
+      <BusinessMatchmaking />
       {/* <TraedBusinessSection /> */}
       <AboutUsSection />
-      <SellInvoice />
       <FlexibleSection />
+      <SellInvoice />
       <TradeSection />
       <ItsEasySection />
       <WhatOurUserSaySection />

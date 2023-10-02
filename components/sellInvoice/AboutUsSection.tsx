@@ -2,7 +2,6 @@ import React from "react";
 import Container from "../Container/Container";
 import aboutImg from "@/public/assets/aboutImg.svg";
 
-
 import Image from "next/image";
 import "./ImageSection.scss";
 
@@ -14,7 +13,7 @@ const AboutUsSection = () => {
         style={{
           width: "100%",
 
-          justifyContent: "center",
+          justifyContent: "space-between",
           flexDirection: "row",
           alignContent: "center",
           alignItems: "center",
@@ -25,7 +24,7 @@ const AboutUsSection = () => {
         <div
           className="content"
           style={{
-            width: "50%",
+            width: "48%",
           }}
         >
           <div className="heading-content">
@@ -42,7 +41,7 @@ const AboutUsSection = () => {
         <div
           className="ImageSection"
           style={{
-            width: "50%",
+            width: "48%",
           }}
         >
           <Image alt="" src={aboutImg} />
