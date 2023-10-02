@@ -42,7 +42,13 @@ function BusinessMatchmaking() {
             </div>
           </div>
           <div className={styles.gridMainImage}>
-            <Image src={"/assets/IOS.png"} alt="asd" layout="fill" />
+            <Image
+              src={"/assets/IOS.png"}
+              alt="asd"
+              layout="fill"
+              objectPosition="center"
+              objectFit="cover"
+            />
           </div>
           <div className={styles.gridColumn}>
             <div className={styles.gridCard}>
