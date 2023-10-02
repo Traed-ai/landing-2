@@ -1,14 +1,45 @@
 .BannerImg {
   position: relative;
 }
-.imgGrid {
-  position: relative;
+
+.imgBg{
+  background: linear-gradient(270.41deg, rgba(238, 238, 238, 0) 14.47%, #EEEEEE 91.58%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  @media (max-width: 768px) {
+    background: #00000033;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
+
+.imgGrid span {
+  position: relative;
+  height: 900px;
+  max-width: 100vw;
+  width: 100%;
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+}
+
 .textDiv {
   position: absolute;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:16px;
+  margin: auto;
   top: 30%;
+  max-width: 800px;
+  @media (max-width: 768px) {
+    align-items: center;
+    top: 40%;
+  }
 }
+
 .bannerHeading {
   color: #0c2027;
   font-family: DM Sans;
@@ -16,14 +47,30 @@
   font-style: normal;
   font-weight: 700;
   line-height: 108.7%;
+  padding: 0 16px 0 0;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+  }
 }
+
 .bannerText {
-    margin-top: 15px;
-  color: #212122;
+  margin-top: 15px;
+  color: #7E8693;
   /* body 2 */
-  font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-width: 722px;
+  width: 100%;
+  padding: 0 16px 0 0;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+    color: #EEEEEE;
+    text-align: center;
+  }
 }
