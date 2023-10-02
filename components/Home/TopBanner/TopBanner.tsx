@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import topBan from "@/public/assets/topBan.jpg";
+import "./banner.scss";
 
 const TopBanner = () => {
   return (
@@ -10,15 +11,21 @@ const TopBanner = () => {
         width: "100%",
         height: "100%",
       }}
+      className="BannerImg"
     >
-      <Image
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-        src={topBan}
-        alt=""
-      />
+      <Grid className="imgGrid">
+        <Image
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          src={topBan}
+          alt=""
+        />
+      </Grid>
+      <Grid className="textDiv" >
+
+      </Grid>
     </Grid>
   );
 };
