@@ -1,67 +1,64 @@
 name: Development
 
 on:
-    workflow_dispatch:
-        inputs:
-            Version:
-                description: "Mention Version of your Release"
-                required: true
-                type: string
+  workflow_dispatch:
+    inputs:
+      Version:
+        description: "Mention Version of your Release"
+        required: true
+        type: string
 
 jobs:
-    Build:
-        name: Build [${{ github.event.inputs.Version }}]
-        runs-on: ubuntu-latest
-        timeout-minutes: 10
-        strategy:
-            matrix:
-                node-version: [18.x]
+  Build:
+    name: Build [${{ github.event.inputs.Version }}]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [14.x]  # Use a valid Node.js version, e.g., 14.x
 
-        steps:
-            - uses: actions/checkout@v3.5.2
+    steps:
+      - uses: actions/checkout@v3.5.2
 
-            - name: Using Nodejs
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{ matrix.node-version }}
+      - name: Using Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
 
-            - name: npm install
-              run: npm install
+      - name: npm install
+        run: npm install
 
-              # - name: npm build
-              #   run: npm run build
+      env:
+        NODE_ENV: "production"
 
-              env:
-                  NODE_ENV: "production"
+  Deploy:
+    needs: [Build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
 
-    Deploy:
-        needs: [Build]
-        runs-on: ubuntu-latest
-        timeout-minutes: 10
+    steps:
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v7
 
-        steps:
-            - name: Get branch name
-              id: branch-name
-              uses: tj-actions/branch-names@v7
+      - name: Running on the default branch.
+        if: steps.branch-name.outputs.is_default == 'true'
+        run: |
+          echo "Running on default: ${{ steps.branch-name.outputs.current_branch }}"
 
-            - name: Running on the default branch.
-              if: steps.branch-name.outputs.is_default == 'true'
-              run: |
-                  echo "Running on default: ${{ steps.branch-name.outputs.current_branch }}"
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
 
-            - name: Deploy to Server
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{ secrets.SSH_HOST }}
-                  username: ${{ secrets.SSH_USERNAME }}
-                  key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd landing-2
+            git fetch
+            git checkout ${{ steps.branch-name.outputs.current_branch }}
+            git pull
+            npm install
+            pm2 restart landing-2
 
-                  script: |
-                      cd landing-2
-                      git fetch
-                      git checkout ${{ steps.branch-name.outputs.current_branch }}
-                      git pull
-                      npm install
-                      pm2 restart landing-2
-
-    # Notification:
+# Notification:
