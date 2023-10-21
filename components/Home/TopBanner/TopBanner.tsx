@@ -42,12 +42,13 @@ const TopBanner = () => {
       <Container>
         <div className="textDiv">
           <div className="bannerHeading">
-            Accounting, but make it easy - withTraed!
+            Simplify Your Trade Finance Process
           </div>
           <div className="bannerText">
-            Applications that power financial institutions, marketplaces that
-            accelerate industry & an open innovation platform for banks,
-            fintechs & non-banks to connect and collaborate.
+            Streamline trade finance operations with Traed.ai. Save time,
+            effort, and costs by automating borrower verification, document
+            exchanges, and seamless integration with KYC, KYB, Credit Insurance
+            agents and the clients' accounting systems.
           </div>
           <Link
             href={"https://portal.traed.ai"}

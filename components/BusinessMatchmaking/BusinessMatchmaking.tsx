@@ -9,12 +9,13 @@ function BusinessMatchmaking() {
       <Container>
         <div className={styles.container}>
           <div className={styles.title}>
-            Traed helps your business save time every day!
+            Sharia-Compliant Trade Finance Solutions
           </div>
           <div className={styles.caption}>
-            Traed offers a simple and clear accounting software that can be used
-            anywhere at any. This allows a maximum of flexibility and
-            convenience for you and your customers.
+            Experience the convenience of Sharia-compliant trade finance with
+            Traed.ai. Unlock tailored working capital solutions adhering to
+            Islamic principles. Access flexible funding options, secure export
+            financing, and benefit from our comprehensive suite of services
           </div>
         </div>
         <div className={styles.gridContainer}>
